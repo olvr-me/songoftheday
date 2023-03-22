@@ -15,6 +15,11 @@ Das gesamte Projekt könnte ich dann nachher entweder auf Vercel über deren eig
 ## Das Design
 Ich stelle mir das so vor, dass die Seite sowohl für mobile als auch für Desktop ähnlich aussieht. Die WebSite ist komplett in Schwarz (OLED ausnutzen) und zeigt das Coverbild sehr groß in der Mitte an. Um das Bild herum soll ein glow Effekt sein, den ich bereits in einem TailWind Tutorial (siehe unten) gesehen habe. Mega cool wäre es, wenn dieser die Primärfarbe des Thumbnails an sich übernehmen könnte. Dafür gibt es auch schon eine coole Library (siehe unten).
 
+Hier der Link zu [Figma](https://www.figma.com/file/MXZB8EKbhI017fT0A66vlU/Spotify-'Song-of-the-day'-Project?node-id=0%3A1&t=vwVDmDSt1NbTpZan-1) wie ich mir das ganze in etwa vorstelle.
+
+Hier der derzeitige Stand:
+![image](/documentation/Design%20songoftheday.png)
+
 ## Die Daten
 Ich bräuchte für v1 vermutlich nur eine Sache: Einen Spotify Link. Über die API sollte Name/Interpret und sogar das Bild schon abrufbar sein. Hier könnte ich mich am Video von Kevin Chronik (siehe unten) orientieren, der die Spotify API mal in einem seiner Videos für eine iOS App angebunden hat. Ich müsste mir dann irgendwie von diesem Link aus alles noch beschaffen. Könnte ich aber vermutlich auch statisch machen - dann sollte die website auch mega schnell sein. Könnte etwas für die olvr.me Homepage sein als allererste Idee :)
 
@@ -24,14 +29,14 @@ Ich bräuchte für v1 vermutlich nur eine Sache: Einen Spotify Link. Über die A
 2. Skript zum generieren der Pages anstoßen // Build des Projekts anstoßen (wenn statisch gerendert) // Über GitHub Actions triggern lassen // Über Vercel push bauen lassen
 3. Spotify Playlist erweitern
 
-Der Workflow zum Projekt anlegen:
+## Der Workflow zum Projekt anlegen
 1. Projekt auschecken
 2. Songs Playlist mit Liedern befallen
 3. .env Variable austauschen (wenn Spotify einen anderen Client-Key für die API braucht)
 4. Mit `npm run dev` bauen/lokal hosten
 5. Auf Vercel o.Ä. deployen
 
-Was mir noch an wissen fehlt + Quellen wo man es finden könnte:
+## Was mir noch an wissen fehlt + Quellen wo man es finden könnte s
 * Wie bekomme ich die Daten von Spotify? (Name, Interpret, Thumbnail) (Kevin Chromik hat mal ein [Video](https://www.youtube.com/watch?v=UpAlKFf7Emo&list=PLbiAxP0T4RyGyGQ-_xKAR8SfXjpttd9rL&index=1&t=56s) zu dem Thema gemacht:  Recherche-Links: [Node API](https://github.com/thelinmichael/spotify-web-api-node), [Client API](https://github.com/jmperez/spotify-web-api-js), [Endpunkt für Track](https://developer.spotify.com/documentation/web-api/reference/#/operations/get-track)
 * Wie erstelle ich den blur-Effekt? Hier etwas ähnliches mit [tailwind](https://www.youtube.com/watch?v=5W6kEP65AH4&t=479s)
 * Wie bekomme ich die dominante Farbe heraus? Vielleicht mit [color thief](https://github.com/lokesh/color-thief).
