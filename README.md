@@ -32,10 +32,10 @@ Der Workflow zum Projekt anlegen:
 5. Auf Vercel o.Ä. deployen
 
 Was mir noch an wissen fehlt + Quellen wo man es finden könnte:
-* Wie bekomme ich die Daten von Spotify? (Name, Interpret, Thumbnail) (Kevin Chromik hat mal ein Video zu dem Thema gemacht:  Recherche-Links: Node API, Client API, Endpunkt für Track
-* Wie erstelle ich den blur-Effekt? Nutze ich Tailwind?
-* Wie bekomme ich die dominante Farbe heraus? Vielleicht mit color thief.
-* Wie lasse ich statisch die einzelnen Seiten bauen? -> Dann müsste ich nicht clientseitig die Sachen immer laden und könnte das statisch bauen (vielleicht hierzu was: https://beta.nextjs.org/docs/rendering/static-and-dynamic-rendering)
+* Wie bekomme ich die Daten von Spotify? (Name, Interpret, Thumbnail) (Kevin Chromik hat mal ein [Video](https://www.youtube.com/watch?v=UpAlKFf7Emo&list=PLbiAxP0T4RyGyGQ-_xKAR8SfXjpttd9rL&index=1&t=56s) zu dem Thema gemacht:  Recherche-Links: [Node API](https://github.com/thelinmichael/spotify-web-api-node), [Client API](https://github.com/jmperez/spotify-web-api-js), [Endpunkt für Track](https://developer.spotify.com/documentation/web-api/reference/#/operations/get-track)
+* Wie erstelle ich den blur-Effekt? Hier etwas ähnliches mit [tailwind](https://www.youtube.com/watch?v=5W6kEP65AH4&t=479s)
+* Wie bekomme ich die dominante Farbe heraus? Vielleicht mit [color thief](https://github.com/lokesh/color-thief).
+* Wie lasse ich statisch die einzelnen Seiten bauen? -> Dann müsste ich nicht clientseitig die Sachen immer laden und könnte das statisch bauen (vielleicht hier in der [NextJS Doku](https://beta.nextjs.org/docs/rendering/static-and-dynamic-rendering) was.
 * Wie kann ich die Seite auf meiner olvr.me Seite hosten (alternativ könnte ich die auch vorher auch ner Vercel page hosten)
 
 ---
