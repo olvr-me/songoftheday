@@ -4,19 +4,12 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 const getExampleSongData = async () => {
-  const res = await getTrack('moin');
-
-  return res;
+  return await getTrack('');
 }
 
 export default async function Page() {
-  const data = await getExampleSongData();
-  const song = data.data;
+  const song = await getExampleSongData();
   
-  console.log(song);
-  
-  console.log(`title: ${song.title}`)
-
   return (
     <main>
       <div>

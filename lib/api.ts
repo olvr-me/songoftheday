@@ -9,5 +9,5 @@ export const getTrack = async (id) => {
 
     const result = await res.json();
 
-    return result;
+    return result.data;
 }
