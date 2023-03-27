@@ -24,8 +24,5 @@ export const getTrack = async (id) => {
         },
     });
 
-    console.log('response:');
-    console.log(await response.json());
-
     return access_token;
 }

@@ -4,7 +4,14 @@ import { getTrack } from '@/lib/spotifyApi';
 const inter = Inter({ subsets: ['latin'] })
 
 const getExampleSongData = async () => {
-  return await getTrack('4AGwu2Zn3sYmR2s2y3vfft');
+  const track = await getTrack('4AGwu2Zn3sYmR2s2y3vfft');
+  
+  console.log(track);
+
+  return {
+    title: 'Hannah (the sun)',
+    artist: 'Fred again..'
+  }
 }
 
 export default async function Page() {
