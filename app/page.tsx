@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import { getTrack } from '@/lib/spotifyApi';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,9 +16,13 @@ export default async function Page() {
   return (
     <main>
       <div>
-        <h1>Hello :)</h1>
         <h3>Song: {song.title}</h3>
         <h3>Artist: {song.artist}</h3>
+        <Image 
+          src={song.imageUrl}
+          width={600}
+          height={600}
+        />
       </div>
     </main>
   )
