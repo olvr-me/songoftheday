@@ -26,8 +26,6 @@ export const getTrack = async (id) => {
 
     const track = await response.json();
 
-    console.log(track.album.images);
-
     return {
         title: track.name,
         artist: track.artists[0].name,

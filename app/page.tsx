@@ -11,8 +11,6 @@ const getExampleSongData = async () => {
 export default async function Page() {
   const song = await getExampleSongData();
 
-  console.log(song)
-
   return (
     <main>
       <div>
@@ -22,6 +20,7 @@ export default async function Page() {
           src={song.imageUrl}
           width={600}
           height={600}
+          alt={`Coverimage of song \'${song.title}\' from artist \'${song.artist}\'`}
         />
       </div>
     </main>
