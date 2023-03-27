@@ -4,25 +4,20 @@ import { getTrack } from '@/lib/spotifyApi';
 const inter = Inter({ subsets: ['latin'] })
 
 const getExampleSongData = async () => {
-  const track = await getTrack('4AGwu2Zn3sYmR2s2y3vfft');
-  
-  console.log(track);
-
-  return {
-    title: 'Hannah (the sun)',
-    artist: 'Fred again..'
-  }
+  return await getTrack('4AGwu2Zn3sYmR2s2y3vfft');
 }
 
 export default async function Page() {
-  const data = await getExampleSongData();
+  const song = await getExampleSongData();
 
-  console.log(data)
+  console.log(song)
 
   return (
     <main>
       <div>
         <h1>Hello :)</h1>
+        <h3>Song: {song.title}</h3>
+        <h3>Artist: {song.artist}</h3>
       </div>
     </main>
   )

@@ -24,5 +24,10 @@ export const getTrack = async (id) => {
         },
     });
 
-    return access_token;
+    const track = await response.json();
+
+    return {
+        title: track.name,
+        artist: track.artists[0].name,
+    }
 }
