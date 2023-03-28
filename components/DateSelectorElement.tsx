@@ -1,8 +1,13 @@
-function DateSelectorElement({ date, songId }) {
+function DateSelectorElement({ date, songId, isActive }) {
+    
+    // console.log(`Button for date ${date} is active:${isActive}`)
+    
     return (
         <>
-            <h3>{date}</h3>
-            <h3>{songId}</h3>
+            <h3
+                className={`${isActive ? 'text-white' : 'text-red'} text-sm font-bold`}>
+                {date}
+            </h3>
         </>
     );
 };

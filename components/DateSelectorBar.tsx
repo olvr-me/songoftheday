@@ -1,3 +1,5 @@
+'use client'
+import { useState } from "react";
 import DateSelectorElement from "./DateSelectorElement";
 
 const songs = [
@@ -24,11 +26,27 @@ function SelectionBar({children}) {
 }
 
 const DateSelectionBar = () => {
+    const [activeDate, setActiveDate] = useState('28.3.2023');
+
+    const handleDateClick = (date) => {
+        setActiveDate(date);
+    }
+
+    console.log(activeDate);
+    console.log(`isActiveDate: ${'28.3.2023' === activeDate}`);
+
     return (
         <SelectionBar>
-            {songs.map(s => (
-                <DateSelectorElement date={s.date} songId={s.songId} />
-            ))}
+            {songs.map(s => {
+                console.log(`Button for date ${s.date} should active:${s.date} valueOfState:${activeDate} - activeDate type: ${typeof activeDate}, s.date type: ${typeof s.date}`)
+
+                return <DateSelectorElement 
+                    key={s.date} 
+                    date={s.date} 
+                    songId={s.songId}
+                    isActive={s.date === activeDate}
+                />
+            })}
         </SelectionBar>
     )
 }
