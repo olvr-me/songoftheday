@@ -26,9 +26,9 @@ function SelectionBar({children}) {
 const DateSelectionBar = () => {
     return (
         <SelectionBar>
-            {songs.map(s => {
-                return <DateSelectorElement date={s.date} songId={s.songId} />
-            })}
+            {songs.map(s => (
+                <DateSelectorElement date={s.date} songId={s.songId} />
+            ))}
         </SelectionBar>
     )
 }
