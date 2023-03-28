@@ -4,9 +4,9 @@ Hier beschreibe ich die übrigen ToDos für das Projekt
 
 ## 💽 Daten von Spotify abrufen
 
-- [ ] Token von Spotify bekommen
-- [ ] Daten erstmal über API-Call abrufen
-- [ ] Mich mit den Ids und Links auseinander setzen
+- [X] Token von Spotify bekommen
+- [X] Daten erstmal über API-Call abrufen
+- [X] Mich mit den Ids und Links auseinander setzen
 
 ## ⚛️ React Komponenten erstellen
 
