@@ -1,11 +1,10 @@
 import { Inter } from 'next/font/google'
 import { getTrack } from '@/lib/spotifyApi';
 import Image from 'next/image';
-
-const inter = Inter({ subsets: ['latin'] })
+import DateSelectionBar from '@/components/DateSelectorBar';
 
 const getExampleSongData = async () => {
-  return await getTrack('4AGwu2Zn3sYmR2s2y3vfft');
+  return await getTrack('4zlbKky2yA657Sk5rekZoR');
 }
 
 export default async function Page() {
@@ -14,6 +13,8 @@ export default async function Page() {
   return (
     <main>
       <div>
+        <DateSelectionBar />
+
         <h3>Song: {song.title}</h3>
         <h3>Artist: {song.artist}</h3>
         <Image 
