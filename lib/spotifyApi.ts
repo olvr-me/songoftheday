@@ -10,6 +10,7 @@ const getAccessToken = async () => {
         body: new URLSearchParams({
             grant_type: "client_credentials"
         }),
+        cache: 'no-cache'
     });
 
     return response.json();
@@ -25,7 +26,7 @@ export const getTrack = async (id) => {
     });
 
     const track = await response.json();
-
+    
     return {
         title: track.name,
         artist: track.artists[0].name,
