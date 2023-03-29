@@ -1,7 +1,4 @@
-import { Inter } from 'next/font/google'
 import { getTrack } from '@/lib/spotifyApi';
-import Image from 'next/image';
-import DateSelectionBar from '@/components/DateSelectorBar';
 import Song from '@/components/Song';
 
 const getExampleSongData = async () => {
