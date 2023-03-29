@@ -13,8 +13,6 @@ export default async function Page() {
   return (
     <main>
       <div>
-        <DateSelectionBar />
-
         <h3>Song: {song.title}</h3>
         <h3>Artist: {song.artist}</h3>
         <Image 

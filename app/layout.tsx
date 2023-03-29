@@ -1,3 +1,4 @@
+import DateSelectionBar from '@/components/DateSelectorBar'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <DateSelectionBar />
+        {children}
+      </body>
     </html>
   )
 }
