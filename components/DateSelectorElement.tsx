@@ -1,13 +1,16 @@
+import Link from "next/link";
+
 function DateSelectorElement({ date, songId, isActive, dateWasClicked }) {
 
     return (
         <>
-            <h3
+            <Link
+                href={songId}
                 className={`${isActive ? 'text-white' : 'text-gray-500'} text-sm font-bold`}
                 onClick={() => dateWasClicked(date)}
             >
                 {date}
-            </h3>
+            </Link>
         </>
     );
 };
