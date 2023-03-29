@@ -26,34 +26,20 @@ function SelectionBar({children}) {
 }
 
 const DateSelectionBar = () => {
-    const [activeDate, setActiveDate] = useState(new Date(2023, 2, 28)); // Note that months are zero-indexed in JavaScript, so March is represented by 2
+    const [activeDate, setActiveDate] = useState('28.03.2023');
 
     const handleDateClick = (date) => {
 
         if(date === undefined)
             return;
 
-        console.log(`is this a date? ${date instanceof Date}`);
-        console.log(`this is the date:`);
-        console.log(date);
-
-
-        const parts = date.split('.');
-        const europeanDate = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
-        europeanDate.setHours(0, 0, 0, 0);
-
-        setActiveDate(europeanDate);
+        setActiveDate(date);
     }
 
     return (
         <SelectionBar>
             {songs.map(s => {
-                const parts = s.date.split('.');
-                const europeanDate = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
-                europeanDate.setHours(0, 0, 0, 0);
-                
-                const formattedDate = new Date(europeanDate);
-                const isActive = europeanDate.getTime() === activeDate.getTime();
+                const isActive = activeDate === s.date;
 
                 return <DateSelectorElement 
                     key={s.date}
