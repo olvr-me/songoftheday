@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import { getTrack } from '@/lib/spotifyApi';
 import Image from 'next/image';
 import DateSelectionBar from '@/components/DateSelectorBar';
+import Song from '@/components/Song';
 
 const getExampleSongData = async () => {
   return await getTrack('4zlbKky2yA657Sk5rekZoR');
@@ -13,14 +14,7 @@ export default async function Page() {
   return (
     <main>
       <div>
-        <h3>Song: {song.title}</h3>
-        <h3>Artist: {song.artist}</h3>
-        <Image 
-          src={song.imageUrl}
-          width={600}
-          height={600}
-          alt={`Coverimage of song \'${song.title}\' from artist \'${song.artist}\'`}
-        />
+        <Song title={song.title} artist={song.artist} imageUrl={song.imageUrl}/>
       </div>
     </main>
   )
