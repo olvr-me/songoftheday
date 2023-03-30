@@ -10,11 +10,11 @@ Hier beschreibe ich die übrigen ToDos für das Projekt
 
 ## ⚛️ React Komponenten erstellen
 
-- [ ] Komponente für Songauswahl
-  - [ ] Komponente für Datum
-- [ ] Komponente für TrackInfo
-  - [ ] Komponente für Artwork
-  - [ ] Komponente für Daten (Trackname + Artistname)
+- [X] Komponente für Songauswahl
+  - [X] Komponente für Datum
+- [X] Komponente für TrackInfo
+  - [X] Komponente für Artwork
+  - [X] Komponente für Daten (Trackname + Artistname)
   - [ ] Komponente für anklickbaren Spotify Link
 
 ## 🗓️ Herausfinden wie ich die Daten dort herein bekomme
