@@ -13,7 +13,7 @@ export default async function Page({ params }) {
             <div>
                 <Song
                     title={song.title}
-                    artist={song.artist}
+                    artists={song.artists}
                     imageUrl={song.imageUrl} />
             </div>
         </main>

@@ -26,10 +26,10 @@ export const getTrack = async (id) => {
     });
 
     const track = await response.json();
-    
+
     return {
         title: track.name,
-        artist: track.artists[0].name,
+        artists: track.artists.map(a => a.name).join(', '),
         imageUrl: track.album.images[0].url
     }
 }

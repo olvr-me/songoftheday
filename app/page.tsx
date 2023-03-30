@@ -11,7 +11,11 @@ export default async function Page() {
   return (
     <main>
       <div>
-        <Song title={song.title} artist={song.artist} imageUrl={song.imageUrl}/>
+        <Song
+          title={song.title}
+          artists={song.artists}
+          imageUrl={song.imageUrl}
+        />
       </div>
     </main>
   )
