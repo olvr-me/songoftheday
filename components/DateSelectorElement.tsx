@@ -6,7 +6,7 @@ function DateSelectorElement({ date, songId, isActive, dateWasClicked }) {
         <>
             <Link
                 href={songId}
-                className={`${isActive ? 'text-white' : 'text-gray-500'} text-sm font-bold`}
+                className={`${isActive ? 'text-white' : 'text-gray-500'} text-sm font-bold mr-2`}
                 onClick={() => dateWasClicked(date)}
             >
                 {date}
