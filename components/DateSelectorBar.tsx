@@ -34,7 +34,6 @@ function DateSelectionBar() {
                 return <DateSelectorElement
                     key={d.date}
                     date={d.date}
-                    songId={d.songId}
                     isActive={activeDate === d.date}
                     dateWasClicked={handleDateClick}
                 />

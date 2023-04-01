@@ -1,9 +1,9 @@
 import Song from '@/components/Song';
 
-import { getSong } from '@/lib/api';
+import { getSong, getSongByDate } from '@/lib/api';
 
 export default async function Page({ params }) {
-    const song = await getSong(params.songId);
+    const song = await getSongByDate(params.date);
 
     return (
         <main>
