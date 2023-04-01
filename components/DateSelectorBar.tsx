@@ -8,7 +8,7 @@ function SelectionBar({children}) {
 }
 
 function DateSelectionBar() {
-    const [activeDate, setActiveDate] = useState('28.03.2023');
+    const [activeDate, setActiveDate] = useState('');
     const [dates, setDates] = useState([]);
 
     useEffect(() => {

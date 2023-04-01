@@ -1,21 +1,11 @@
-import { getTrack } from '@/lib/spotifyApi';
-import Song from '@/components/Song';
-
-const getExampleSongData = async () => {
-  return await getTrack('4zlbKky2yA657Sk5rekZoR');
-}
-
 export default async function Page() {
-  const song = await getExampleSongData();
 
   return (
     <main>
       <div>
-        <Song
-          title={song.title}
-          artists={song.artists}
-          imageUrl={song.imageUrl}
-        />
+        <h1>Hello,</h1>
+        <p>this is a small collection of songs which I liked in the past.</p>
+        <p>Select a date and you can see which one it was on that particular day :)</p>
       </div>
     </main>
   )
