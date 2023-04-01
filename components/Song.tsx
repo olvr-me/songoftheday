@@ -10,8 +10,8 @@ function DateSelectorElement({ title, artists, imageUrl }) {
                 height={600}
                 alt={`Coverimage of song \'${title}\' from artists \'${artists}\'`}
             />
-            <h3>Song: {title}</h3>
-            <h3 className='text-slate-400'>Artist: {artists}</h3>
+            <h3>{title}</h3>
+            <h3 className='text-slate-400'>{artists}</h3>
         </>
     );
 };
