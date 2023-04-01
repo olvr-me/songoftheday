@@ -11,23 +11,16 @@ export const getAllDates = async () => {
 };
 
 export const getSongByDate = async (date) => {
-    const allDates = await getAllDates();
-
-    let foundSongId;
-    allDates.dates.forEach(d => {
-
-        console.log(`date: ${d.date} searchDate: ${date} are equal: ${d.date === date}`)
-
-        if (d.date === date) {
-            foundSongId = d.songId;
-        }
+    const response = await fetch(`http://localhost:3000/api/dates?date=${date}`, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        cache: 'no-cache'
     });
 
-    if (foundSongId === undefined) {
-        return null;
-    }
-
-    return await getSong(foundSongId);
+    return response.json();
 }
 
 export const getSong = async (songId) => {

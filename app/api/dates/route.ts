@@ -2,35 +2,9 @@ import { NextResponse } from 'next/server';
 import path from 'path';
 import { promises as fs } from 'fs';
 
-const allDates = [
-    {
-        date: '01.04.2023',
-        songId: '6YjVrP2g7gJYh3aXkgnspC'
-    },
-    {
-        date: '31.03.2023',
-        songId: '0hJfuyUwtEYMlGgvr3nzz9'
-    },
-    {
-        date: '28.03.2023',
-        songId: '1sklC11tCgdL59gNWB7Vli'
-    },
-    {
-        date: '27.03.2023',
-        songId: '4AGwu2Zn3sYmR2s2y3vfft'
-    },
-    {
-        date: '26.03.2023',
-        songId: '3KffMs30iYfPNYI8epNj5a'
-    },
-    {
-        date: '25.03.2023',
-        songId: '4zlbKky2yA657Sk5rekZoR'
-    },
-];
+import { getTrack } from '@/lib/spotifyApi';
 
 export async function GET(request: Request) {
-
     const { searchParams } = new URL(request.url);
     const date = searchParams.get('date');
 
@@ -41,13 +15,28 @@ export async function GET(request: Request) {
         return NextResponse.json(allDates);
     }
 
-    // ToDo: Hier den Eintrag aus dem spezifischen Datum
-    const result = {
-        date: '25.03.2023',
-        songId: '4zlbKky2yA657Sk5rekZoR'
-    };
+    let foundSongId = await getSongIdByDate(date);
+    if (foundSongId === null) {
+        return NextResponse.error();
+    }
 
-    return NextResponse.json(result);
+    return NextResponse.json(await getTrack(foundSongId));
+}
+
+async function getSongIdByDate(date) {
+    const allDates = await getAllDates();
+
+    let foundSongId = null;
+    allDates.dates.forEach(d => {
+
+        console.log(`date: ${d.date} searchDate: ${date} are equal: ${d.date === date}`)
+
+        if (d.date === date) {
+            foundSongId = d.songId;
+        }
+    });
+
+    return foundSongId;
 }
 
 async function getAllDates() {
