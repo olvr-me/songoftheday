@@ -1,4 +1,4 @@
-const getDates = async () => {
+export const getDates = async () => {
 
     console.log('making api-call to getDates');
 
@@ -12,5 +12,3 @@ const getDates = async () => {
 
     return response.json();
 };
-
-export default getDates;
