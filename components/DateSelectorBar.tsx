@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import DateSelectorElement from "./DateSelectorElement";
 import { getDates } from "@/lib/api";
 
-function SelectionBar({children}) {
+function SelectionBar({ children }) {
     return <div>{children}</div>
 }
 
@@ -12,16 +12,17 @@ function DateSelectionBar() {
     const [dates, setDates] = useState([]);
 
     useEffect(() => {
-        async function fetchDates() {
+        async function fetchDates() {            
             const data = await getDates();
-            setDates(data);
+
+            setDates(data.dates);
         }
 
         fetchDates();
     }, []);
 
     const handleDateClick = (date) => {
-        if(date === undefined)
+        if (date === undefined)
             return;
 
         setActiveDate(date);
@@ -30,9 +31,9 @@ function DateSelectionBar() {
     return (
         <SelectionBar>
             {dates.map(d => {
-                return <DateSelectorElement 
+                return <DateSelectorElement
                     key={d.date}
-                    date={d.date} 
+                    date={d.date}
                     songId={d.songId}
                     isActive={activeDate === d.date}
                     dateWasClicked={handleDateClick}

@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+import path from 'path';
+import { promises as fs } from 'fs';
 
 const allDates = [
     {
@@ -32,17 +34,27 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const date = searchParams.get('date');
 
-    console.log(`date Paramter: ${date}`);
-
     const noSpecificDateRequested = date === null;
-    if (noSpecificDateRequested)
+    if (noSpecificDateRequested) {
+        const allDates = await getAllDates();
+
         return NextResponse.json(allDates);
+    }
 
     // ToDo: Hier den Eintrag aus dem spezifischen Datum
     const result = {
         date: '25.03.2023',
         songId: '4zlbKky2yA657Sk5rekZoR'
-    }; 
-    
+    };
+
     return NextResponse.json(result);
+}
+
+async function getAllDates() {
+    const jsonDirectory = path.join(process.cwd(), '');
+    const fileContents = await fs.readFile(jsonDirectory + '/data.json', 'utf8');
+
+    const dataobj = JSON.parse(fileContents);
+
+    return dataobj;
 }
