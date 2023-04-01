@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-function DateSelectorElement({ title, artists, imageUrl }) {
+function Song({ title, artists, imageUrl }) {
 
     return (
         <>
@@ -16,4 +16,4 @@ function DateSelectorElement({ title, artists, imageUrl }) {
     );
 };
 
-export default DateSelectorElement;
+export default Song;
