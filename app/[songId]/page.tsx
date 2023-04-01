@@ -1,12 +1,8 @@
 import { getTrack } from '@/lib/spotifyApi';
 import Song from '@/components/Song';
 
-const getSongData = async (songId) => {
-    return await getTrack(songId);
-}
-
 export default async function Page({ params }) {
-    const song = await getSongData(params.songId);
+    const song = await getTrack(params.songId);
 
     return (
         <main>
