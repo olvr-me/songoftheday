@@ -1,8 +1,9 @@
-import { getTrack } from '@/lib/spotifyApi';
 import Song from '@/components/Song';
 
+import { getSong } from '@/lib/api';
+
 export default async function Page({ params }) {
-    const song = await getTrack(params.songId);
+    const song = await getSong(params.songId);
 
     return (
         <main>
@@ -10,7 +11,8 @@ export default async function Page({ params }) {
                 <Song
                     title={song.title}
                     artists={song.artists}
-                    imageUrl={song.imageUrl} />
+                    imageUrl={song.imageUrl}
+                />
             </div>
         </main>
     )

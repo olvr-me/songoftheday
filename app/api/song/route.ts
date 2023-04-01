@@ -1,9 +1,12 @@
-import { getTrack } from '@/lib/spotifyApi';
 import { NextResponse } from 'next/server';
 
-export async function GET() {
+import { getTrack } from '@/lib/spotifyApi';
 
-    const res = await getTrack('4AGwu2Zn3sYmR2s2y3vfft');
+export async function GET(request: Request) {
+    const { searchParams } = new URL(request.url);
+    const songId = searchParams.get('songId');
+
+    const res = await getTrack(songId);
 
     return NextResponse.json(res);
 }
