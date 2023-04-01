@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const songs = [
+const allDates = [
     {
         date: '01.04.2023',
         songId: '6YjVrP2g7gJYh3aXkgnspC'
@@ -27,7 +27,22 @@ const songs = [
     },
 ];
 
-export async function GET() {
+export async function GET(request: Request) {
 
-    return NextResponse.json(songs);
+    const { searchParams } = new URL(request.url);
+    const date = searchParams.get('date');
+
+    console.log(`date Paramter: ${date}`);
+
+    const noSpecificDateRequested = date === null;
+    if (noSpecificDateRequested)
+        return NextResponse.json(allDates);
+
+    // ToDo: Hier den Eintrag aus dem spezifischen Datum
+    const result = {
+        date: '25.03.2023',
+        songId: '4zlbKky2yA657Sk5rekZoR'
+    }; 
+    
+    return NextResponse.json(result);
 }
