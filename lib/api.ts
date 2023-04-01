@@ -1,4 +1,4 @@
-export const getDates = async () => {
+export const getAllDates = async () => {
     const response = await fetch('http://localhost:3000/api/dates', {
         method: "GET",
         headers: {

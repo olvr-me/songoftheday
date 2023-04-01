@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import DateSelectorElement from "./DateSelectorElement";
-import { getDates } from "@/lib/api";
+import { getAllDates } from "@/lib/api";
 
 function SelectionBar({ children }) {
     return <div>{children}</div>
@@ -13,7 +13,7 @@ function DateSelectionBar() {
 
     useEffect(() => {
         async function fetchDates() {            
-            const data = await getDates();
+            const data = await getAllDates();
 
             setDates(data.dates);
         }
