@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import spotifyLogo from '../assets/Spotify_Logo_RGB_White.png'
+import spotifyLogo from '../assets/Spotify_Logo_RGB_Green.png'
 
 function Song({ title, artists, imageUrl, link }) {
 
