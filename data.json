@@ -2,35 +2,43 @@
     "dates": [
         {
             "date": "01.04.2023",
-            "songId": "6YjVrP2g7gJYh3aXkgnspC"
+            "songId": "6YjVrP2g7gJYh3aXkgnspC",
+            "link": "https://open.spotify.com/track/6YjVrP2g7gJYh3aXkgnspC?si=0abe9fa81d3b46ca"
         },
         {
             "date": "31.03.2023",
-            "songId": "0hJfuyUwtEYMlGgvr3nzz9"
+            "songId": "0hJfuyUwtEYMlGgvr3nzz9",
+            "link": "https://open.spotify.com/track/0hJfuyUwtEYMlGgvr3nzz9?si=355db5d485464201"
         },
         {
-            "date" : "30.3.2023",
-            "songId": "5YSHygGN9D0mID1NsVd5my"
+            "date": "30.3.2023",
+            "songId": "5YSHygGN9D0mID1NsVd5my",
+            "link": "https://open.spotify.com/track/5YSHygGN9D0mID1NsVd5my?si=6504cbef8990405c"
         },
         {
             "date": "29.3.2023",
-            "songId": "0cVdMdtrHdCuHQBWjzvQed"
+            "songId": "0cVdMdtrHdCuHQBWjzvQed",
+            "link": "https://open.spotify.com/track/0cVdMdtrHdCuHQBWjzvQed?si=66757dad02464ce9"
         },
         {
             "date": "28.03.2023",
-            "songId": "1sklC11tCgdL59gNWB7Vli"
+            "songId": "1sklC11tCgdL59gNWB7Vli",
+            "link": "https://open.spotify.com/track/1sklC11tCgdL59gNWB7Vli?si=2367b1babfec42d9"
         },
         {
             "date": "27.03.2023",
-            "songId": "4AGwu2Zn3sYmR2s2y3vfft"
+            "songId": "4AGwu2Zn3sYmR2s2y3vfft",
+            "link": "https://open.spotify.com/track/4AGwu2Zn3sYmR2s2y3vfft?si=37672c0dd59e4f88"
         },
         {
             "date": "26.03.2023",
-            "songId": "3KffMs30iYfPNYI8epNj5a"
+            "songId": "5X78zXRKBpf6089Y348Wne",
+            "link": "https://open.spotify.com/track/5X78zXRKBpf6089Y348Wne?si=4db1d448690b4502"
         },
         {
             "date": "25.03.2023",
-            "songId": "4zlbKky2yA657Sk5rekZoR"
+            "songId": "4zlbKky2yA657Sk5rekZoR",
+            "link": "https://open.spotify.com/track/4zlbKky2yA657Sk5rekZoR?si=4501a6989fa64136"
         }
     ]
 }
