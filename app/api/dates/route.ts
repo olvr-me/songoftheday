@@ -23,16 +23,24 @@ export async function GET(request: Request) {
     return NextResponse.json(await getTrack(foundSongId));
 }
 
+function extractTrackId(link) {
+    const regex = /\/track\/([a-zA-Z0-9]{22})/;
+    const match = link.match(regex);
+    if (match) {
+      return match[1];
+    }
+    return null; // or throw an error, depending on how you want to handle invalid links
+  }
+
 async function getSongIdByDate(date) {
     const allDates = await getAllDates();
 
     let foundSongId = null;
     allDates.dates.every(d => {
 
-        console.log(`date: ${d.date} searchDate: ${date} are equal: ${d.date === date}`)
-
         if (d.date === date) {
-            foundSongId = d.songId;
+            foundSongId = extractTrackId(d.link);
+
             return false;
         }
 
