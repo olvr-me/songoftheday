@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={roboto.className}>
-      <body>
+      <body className='flex flex-row'>
         <DateSelectionBar />
         {children}
       </body>

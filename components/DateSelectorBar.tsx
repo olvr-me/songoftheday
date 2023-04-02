@@ -31,7 +31,7 @@ function DateSelectionBar() {
     }
 
     return (
-        <SelectionBar className='flex flex-col'>
+        <SelectionBar className='flex flex-col basis-1'>
             {dates.map(d => {
                 return <DateSelectorElement
                     key={d.date}

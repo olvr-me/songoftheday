@@ -7,7 +7,7 @@ function DateSelectorElement({ date, isActive, dateWasClicked }) {
         <>
             <Link
                 href={date}
-                className={`${isActive ? 'text-white' : 'text-gray-500'} text-sm font-bold mr-2 ${sounce_sans_3.className}`}
+                className={`${isActive ? 'text-white' : 'text-gray-500'} text-xl font-bold mr-2 ${sounce_sans_3.className}`}
                 onClick={() => dateWasClicked(date)}
             >
                 {date}
