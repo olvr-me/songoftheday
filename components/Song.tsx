@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-function Song({ title, artists, imageUrl }) {
+import spotifyLogo from '../assets/Spotify_Logo_RGB_White.png'
+
+function Song({ title, artists, imageUrl, link }) {
 
     return (
         <>
@@ -12,6 +15,14 @@ function Song({ title, artists, imageUrl }) {
             />
             <h3>{title}</h3>
             <h3 className='text-slate-400'>{artists}</h3>
+            <Link href={link}>
+                <Image
+                    src={spotifyLogo}
+                    width={120}
+                    height={120}
+                    alt={`Spotify logo'`}
+                />
+            </Link>
         </>
     );
 };
