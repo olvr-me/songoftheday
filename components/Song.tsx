@@ -9,8 +9,8 @@ function Song({ title, artists, imageUrl, link }) {
         <>
             <Image
                 src={imageUrl}
-                width={600}
-                height={600}
+                width={450}
+                height={450}
                 alt={`Coverimage of song \'${title}\' from artists \'${artists}\'`}
             />
             <h3>{title}</h3>
