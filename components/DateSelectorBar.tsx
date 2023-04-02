@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 import DateSelectorElement from "./DateSelectorElement";
 import { getAllDates } from "@/lib/api";
 
-function SelectionBar({ children }) {
-    return <div>{children}</div>
+function SelectionBar({ className, children }) {
+    return <div className={className}>
+        {children}
+    </div>
 }
 
 function DateSelectionBar() {
@@ -12,7 +14,7 @@ function DateSelectionBar() {
     const [dates, setDates] = useState([]);
 
     useEffect(() => {
-        async function fetchDates() {            
+        async function fetchDates() {
             const data = await getAllDates();
 
             setDates(data.dates);
@@ -29,7 +31,7 @@ function DateSelectionBar() {
     }
 
     return (
-        <SelectionBar>
+        <SelectionBar className='flex flex-col'>
             {dates.map(d => {
                 return <DateSelectorElement
                     key={d.date}
