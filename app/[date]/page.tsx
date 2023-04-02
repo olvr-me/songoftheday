@@ -12,6 +12,7 @@ export default async function Page({ params }) {
                     title={song.title}
                     artists={song.artists}
                     imageUrl={song.imageUrl}
+                    link={song.link}
                 />
             </div>
         </main>
