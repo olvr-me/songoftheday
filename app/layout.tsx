@@ -1,5 +1,6 @@
 import DateSelectionBar from '@/components/DateSelectorBar'
 import './globals.css'
+import { roboto } from '@/lib/fonts'
 
 export const metadata = {
   title: 'songoftheday',
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={roboto.className}>
       <body>
         <DateSelectionBar />
         {children}
