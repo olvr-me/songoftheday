@@ -19,7 +19,7 @@ const getAccessToken = async () => {
 export const getTrack = async (id) => {
     const { access_token } = await getAccessToken();
 
-    const response = await fetch(`https://api.spotify.com/v1/tracks/${id}`, {
+    const response = await fetch(`https://api.spotify.com/v1/tracks/${id}?market=DE`, {
         headers: {
             Authorization: `Bearer ${access_token}`,
         },
@@ -30,6 +30,8 @@ export const getTrack = async (id) => {
     return {
         title: track.name,
         artists: track.artists.map(a => a.name).join(', '),
-        imageUrl: track.album.images[0].url
+        imageUrl: track.album.images[0].url,
+        link: track.uri
+        //link: track.external_urls.spotify
     }
 }
