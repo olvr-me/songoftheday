@@ -27,13 +27,16 @@ async function getSongIdByDate(date) {
     const allDates = await getAllDates();
 
     let foundSongId = null;
-    allDates.dates.forEach(d => {
+    allDates.dates.every(d => {
 
         console.log(`date: ${d.date} searchDate: ${date} are equal: ${d.date === date}`)
 
         if (d.date === date) {
             foundSongId = d.songId;
+            return false;
         }
+
+        return true;
     });
 
     return foundSongId;
