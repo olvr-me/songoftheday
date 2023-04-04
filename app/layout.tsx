@@ -1,6 +1,7 @@
 import DateSelectionBar from '@/components/DateSelectorBar'
 import './globals.css'
 import { roboto } from '@/lib/fonts'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'songoftheday',
@@ -14,9 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={roboto.className}>
-      <body className='flex flex-row'>
-        <DateSelectionBar />
-        {children}
+      <body>
+        <Link href='http://olvr.me'>olvr.me</Link>
+        <hr />
+        <div className='flex flex-row'>
+          <DateSelectionBar />
+          {children}
+        </div>
       </body>
     </html>
   )
