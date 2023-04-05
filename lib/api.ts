@@ -4,8 +4,7 @@ export const getAllDates = async () => {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
-        },
-        cache: 'no-cache'
+        }
     });
 
     return response.json();
@@ -19,8 +18,7 @@ export const getSongByDate = async (date) => {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
-        },
-        cache: 'no-cache'
+        }
     });
 
     return response.json();
