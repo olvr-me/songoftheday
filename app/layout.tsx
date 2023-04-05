@@ -2,6 +2,7 @@ import DateSelectionBar from '@/components/DateSelectorBar'
 import './globals.css'
 import { roboto } from '@/lib/fonts'
 import Header from '@/components/Header'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'songoftheday',
@@ -17,9 +18,10 @@ export default function RootLayout({
     <html lang="en" className={roboto.className}>
       <body>
         <Header />
-        <div className='flex flex-row'>
+        <div className='flex flex-row justify-between'>
           <DateSelectionBar />
           {children}
+          <Link href='https://open.spotify.com/playlist/19VvREnkIgYtLATS9s9hFo?si=20ceb02ab6854365'>playlist</Link>
         </div>
       </body>
     </html>
