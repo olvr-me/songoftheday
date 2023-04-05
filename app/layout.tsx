@@ -1,7 +1,6 @@
 import DateSelectionBar from '@/components/DateSelectorBar'
 import './globals.css'
 import { roboto } from '@/lib/fonts'
-import Link from 'next/link'
 import Header from '@/components/Header'
 
 export const metadata = {
