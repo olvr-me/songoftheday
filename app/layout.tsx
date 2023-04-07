@@ -20,7 +20,9 @@ export default function RootLayout({
         <Header />
         <div className='flex flex-row justify-between'>
           <DateSelectionBar />
-          {children}
+          <div className='flex items-center h-screen'>
+            {children}
+          </div>
           <Link href='https://open.spotify.com/playlist/19VvREnkIgYtLATS9s9hFo?si=20ceb02ab6854365'>playlist</Link>
         </div>
       </body>
