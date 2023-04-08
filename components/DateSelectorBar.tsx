@@ -31,16 +31,20 @@ function DateSelectionBar() {
     }
 
     return (
-        <SelectionBar className='flex flex-col basis-1/3'>
-            {dates.map(d => {
-                return <DateSelectorElement
-                    key={d.date}
-                    date={d.date}
-                    isActive={activeDate === d.date}
-                    dateWasClicked={handleDateClick}
-                />
-            })}
-        </SelectionBar>
+        <div className="basis-1/3 ">
+            <SelectionBar className='flex flex-col'>
+                {dates.map(d => {
+                    return <div>
+                        <DateSelectorElement
+                            key={d.date}
+                            date={d.date}
+                            isActive={activeDate === d.date}
+                            dateWasClicked={handleDateClick}
+                        />
+                    </div>
+                })}
+            </SelectionBar>
+        </div>
     )
 }
 
