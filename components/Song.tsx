@@ -9,13 +9,12 @@ function Song({ title, artists, imageUrl, link }) {
 
     function getGlowEffect(color) {
 
-        if (color.data === undefined)
-        {
+        if (color.data === undefined) {
             return {};
         }
 
         return {
-            filter: `drop-shadow(0 0 40px ${color.data}`
+            filter: `drop-shadow(0 0 50px ${color.data}`
         }
     }
 
@@ -30,7 +29,7 @@ function Song({ title, artists, imageUrl, link }) {
                             width={600}
                             height={600}
                             alt={`Coverimage of song \'${title}\' from artists \'${artists}\'`}
-                            style={getGlowEffect({data})}
+                            style={getGlowEffect({ data })}
                         />
                     );
                 }}
