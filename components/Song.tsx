@@ -6,11 +6,11 @@ import spotifyLogo from '../assets/Spotify_Logo_RGB_Green.png'
 function Song({ title, artists, imageUrl, link }) {
 
     return (
-        <div className='flex flex-col ml-1 pb-5'>
+        <div className='flex justify-center flex-col ml-1 pb-5'>
             <Image
                 src={imageUrl}
-                width={450}
-                height={450}
+                width={600}
+                height={600}
                 alt={`Coverimage of song \'${title}\' from artists \'${artists}\'`}
             />
             <div className='mt-5 flex flex-row justify-end'>

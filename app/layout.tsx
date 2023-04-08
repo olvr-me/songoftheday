@@ -20,10 +20,10 @@ export default function RootLayout({
         <Header />
         <div className='flex flex-row justify-between'>
           <DateSelectionBar />
-          <div className='flex items-center h-screen'>
+          <div className='flex items-center h-screen basis-1/3'>
             {children}
           </div>
-          <div />
+          <div className='basis-1/3'/>
         </div>
       </body>
     </html>
