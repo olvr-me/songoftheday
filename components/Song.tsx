@@ -8,8 +8,14 @@ import SongSkeleton from './SongSkeleton';
 function Song({ title, artists, imageUrl, link }) {
 
     function getGlowEffect(color) {
+
+        if (color.data === undefined)
+        {
+            return {};
+        }
+
         return {
-            filter: `drop-shadow(0 0 10.75rem ${color.data}`
+            filter: `drop-shadow(0 0 40px ${color.data}`
         }
     }
 
@@ -17,7 +23,7 @@ function Song({ title, artists, imageUrl, link }) {
         <div className='flex justify-center flex-col ml-1 pb-5'>
             <Color src={imageUrl} crossOrigin="anonymous" format='rgbString'>
                 {({ data, loading }) => {
-                    if (loading) return <SongSkeleton />;
+                    if (loading) return <div><SongSkeleton /> <h1>Hiii</h1> </div>;
                     return (
                         <Image
                             src={imageUrl}
