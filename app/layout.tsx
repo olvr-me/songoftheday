@@ -23,7 +23,7 @@ export default function RootLayout({
           <div className='flex items-center h-screen'>
             {children}
           </div>
-          <Link href='https://open.spotify.com/playlist/19VvREnkIgYtLATS9s9hFo?si=20ceb02ab6854365'>playlist</Link>
+          <div />
         </div>
       </body>
     </html>
