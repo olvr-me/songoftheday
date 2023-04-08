@@ -11,10 +11,10 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        'songw': '450px',
+        'songw': '600px',
       },
       height: {
-        'songh': '450px'
+        'songh': '600px'
       }
     },
   },

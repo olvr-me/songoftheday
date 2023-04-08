@@ -1,18 +1,34 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-
 import spotifyLogo from '../assets/Spotify_Logo_RGB_Green.png'
+import Color from 'color-thief-react';
+import SongSkeleton from './SongSkeleton';
 
 function Song({ title, artists, imageUrl, link }) {
 
+    function getGlowEffect(color) {
+        return {
+            filter: `drop-shadow(0 0 10.75rem ${color.data}`
+        }
+    }
+
     return (
         <div className='flex justify-center flex-col ml-1 pb-5'>
-            <Image
-                src={imageUrl}
-                width={600}
-                height={600}
-                alt={`Coverimage of song \'${title}\' from artists \'${artists}\'`}
-            />
+            <Color src={imageUrl} crossOrigin="anonymous" format='rgbString'>
+                {({ data, loading }) => {
+                    if (loading) return <SongSkeleton />;
+                    return (
+                        <Image
+                            src={imageUrl}
+                            width={600}
+                            height={600}
+                            alt={`Coverimage of song \'${title}\' from artists \'${artists}\'`}
+                            style={getGlowEffect({data})}
+                        />
+                    );
+                }}
+            </Color>
             <div className='mt-5 flex flex-row justify-end'>
                 <div className='basis-2/3'>
                     <h3 className='text-white'>{title}</h3>
@@ -21,9 +37,9 @@ function Song({ title, artists, imageUrl, link }) {
                 <Link href={link} className='basis-1/3'>
                     <Image
                         src={spotifyLogo}
-                        width={2362/10}
-                        height={709/10}
-                        alt={`Spotify logo'`}
+                        width={2362 / 10}
+                        height={709 / 10}
+                        alt={`Spotify logo`}
                     />
                 </Link>
             </div>
