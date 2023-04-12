@@ -43,7 +43,7 @@ function Song({ title, artists, imageUrl, link }) {
 
     return (
         <div className='flex justify-center flex-col m-1 pb-5'>
-            <Palette src={imageUrl} crossOrigin='anonymous' format='rgbString'>
+            <Palette src={imageUrl} crossOrigin='anonymous' format='rgbString' colorCount={4}>
                 {({ data, loading }) => {
                     if (loading)
                         return <div className="animate-pulse w-songw h-songh bg-slate-500" />;
