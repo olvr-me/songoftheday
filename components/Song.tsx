@@ -36,8 +36,8 @@ function Song({ title, artists, imageUrl, link }) {
             </Color>
             <div className='mt-5 flex flex-row justify-end'>
                 <div className='basis-2/3'>
-                    <h3 className='text-white'>{title}</h3>
-                    <h3 className='text-slate-400'>{artists}</h3>
+                    <h3 className='text-white text-xl'>{title}</h3>
+                    <h3 className='text-slate-400 text-sm'>{artists}</h3>
                 </div>
                 <Link href={link} className='basis-1/3'>
                     <Image
