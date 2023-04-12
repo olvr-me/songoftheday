@@ -22,7 +22,9 @@ function Song({ title, artists, imageUrl, link }) {
         <div className='flex justify-center flex-col m-1 pb-5'>
             <Color src={imageUrl} crossOrigin="anonymous" format='rgbString'>
                 {({ data, loading }) => {
-                    if (loading) return <SongSkeleton />;
+                    if (loading)
+                        return <div className="animate-pulse w-songw h-songh bg-slate-500" />;
+
                     return (
                         <Image
                             src={imageUrl}
