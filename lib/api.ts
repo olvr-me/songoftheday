@@ -30,7 +30,8 @@ export const getPlaylistLink = async() => {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
-        }
+        },
+        cache: 'no-cache'
     });
 
     return response.json();
