@@ -1,8 +1,8 @@
 # songoftheday project
 
-This application is a small website to display your handpicked 'songoftheday' on a small website, implemented in [Next.js](https://nextjs.org/).
+This is a small application to display your handpicked 'songoftheday'. You can select a particular date and the cover of the song is displayed in a nice way. You can also provide a link to your own songoftheday playlist.
 
-The cover is displayed in a nice way and you can also provide a link to your own songoftheday playlist.The final page looks like this:
+The final page looks like this:
 
 ![image](/documentation/ScreenshotSongoftheday.png)
 
@@ -45,11 +45,11 @@ npm run dev
 
 To deploy this app to vercel or another provider, you will need to add these environment variables there too.
 
-## Adding your own data
+## Use your own data
 
 You need to change the `data.json` file with two things: 
 1. Change the propery `playlistUrl` to a link to your own playlist.
-2. Add your own songs into the `dates` property. This is an array of objects, where the `date` value is just the date and the `link` is the link from the spotify track, which you can retrieve like this:
+2. Add your own songs into the `dates` property. This is an array of objects, where the `date` value is just the date and the `link` is the link from the spotify track, which you can retrieve in the spotify client like this:
 
 ![image](/documentation/CopySongLinkSpotify.png)
 
