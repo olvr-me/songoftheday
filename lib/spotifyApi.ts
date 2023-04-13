@@ -32,6 +32,5 @@ export const getTrack = async (id) => {
         artists: track.artists.map(a => a.name).join(', '),
         imageUrl: track.album.images[0].url,
         link: track.uri
-        //link: track.external_urls.spotify
     }
 }
