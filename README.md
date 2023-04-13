@@ -1,10 +1,9 @@
-# Songoftheday project
+# songoftheday project
 
 This application is a small website to display your handpicked 'songoftheday' on a small website, implemented in [Next.js](https://nextjs.org/).
 
-The cover is displayed in a nice way and you can also provide a link to your own songoftheday playlist.
+The cover is displayed in a nice way and you can also provide a link to your own songoftheday playlist.The final page looks like this:
 
-The final page looks like this:
 ![image](/documentation/ScreenshotSongoftheday.png)
 
 [Here](https://songoftheday-seven.vercel.app/) you can find a deployed example.
@@ -31,7 +30,7 @@ You need to create a new `.env` file to the root Folder of the application. This
 2. `SPOTIFY_CLIENT_SECRET` - the Secret from the registered Spotify App
 3. `BASE_URL` - the Base URL of your development environment (for example `http://localhost:3000`)
 
-### .env
+### `.env` file
 ```
 SPOTIFY_CLIENT_ID=...
 SPOTIFY_CLIENT_SECRET=...
@@ -55,3 +54,20 @@ You need to change the `data.json` file with two things:
 ![image](/documentation/CopySongLinkSpotify.png)
 
 The final file should look something like this:
+### `data.json` file
+```
+{
+    "playlistUrl": "...",
+    "dates": [
+        {
+            "date": "...",
+            "link": "..."
+        },
+        {
+            "date": "...",
+            "link": "..."
+        },
+        ...
+    ]
+}
+```
