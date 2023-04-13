@@ -25,7 +25,7 @@ export const getSongByDate = async (date) => {
 }
 
 export const getPlaylistLink = async() => {
-    const response = await fetch(`${process.env.BASE_URL}/api/playlist`, {
+    const response = await fetch('/api/playlist', {
         method: "GET",
         headers: {
             Accept: "application/json",
