@@ -23,3 +23,16 @@ export const getSongByDate = async (date) => {
 
     return response.json();
 }
+
+export const getPlaylistLink = async() => {
+    const response = await fetch(`${process.env.BASE_URL}/api/playlist`, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        cache: 'no-cache'
+    });
+
+    return response.json();
+}
