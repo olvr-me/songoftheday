@@ -45,19 +45,19 @@ function Song({ title, artists, imageUrl, link }) {
         <div className='flex justify-center flex-col m-1 pb-5'>
             <Palette src={imageUrl} crossOrigin='anonymous' format='rgbString' colorCount={4}>
                 {({ data, loading }) => {
-                    if (loading)
-                        return <div className="animate-pulse w-songw h-songh bg-slate-500" />;
+                    let lightColor = undefined;
+                    
+                    if (!loading) {
+                        data.forEach((color, index) => {
+                            if (isColorLight(color) && lightColor === undefined) {
+                                lightColor = color;
+                            }
+                        });
 
-                    let lightColor;
-                    data.forEach((color, index) => {
-                        if (isColorLight(color) && lightColor === undefined) {
-                            lightColor = color;
-                        }
-                    });
-
-                    // If there is no light color, we just take the first one
-                    if (lightColor === undefined)
-                        lightColor = data[0];
+                        // If there is no light color, we just take the first one
+                        if (lightColor === undefined)
+                            lightColor = data[0];
+                    }
 
                     return (
                         <Image
